@@ -36,7 +36,7 @@ p {
 
 /* HEADER */
 
-div#main-header {
+header {
     font: large;
     text-align: center;
     font-family: monospace;
@@ -83,24 +83,24 @@ div#navigation-bar a:hover {
     text-decoration-line: underline;
 }
 
-/* content */
+/* MAIN */
 
-div#content {
+main {
     background-color: var(--general);
 }
 
-div#content div.section {
+section {
     padding: 16px 5%;
     overflow: auto;
 }
 
 /* CATEGORIES */
 
-div#categories {
+section#categories {
     background-color: var(--general1);
 }
 
-div#categories ul#categories-list {
+section#categories ul#categories-list {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -109,18 +109,18 @@ div#categories ul#categories-list {
     font-family: sans-serif;
 }
 
-div#categories li.category {
+section#categories li.category {
     float: left;
 }
 
-div#categories li.category div {
+section#categories li.category div {
     display: block;
     padding: 16px;
     text-align: center;
     text-decoration: none;
 }
 
-div#categories div ul {
+section#categories div ul {
     padding: 1;
     font-style: italic;
     list-style-type: square;
@@ -129,7 +129,7 @@ div#categories div ul {
 
 /* POPULAR */
 
-div#popular-articles div {
+section#popular-articles div {
     width: 45%;
     float: left;
     margin: 2%;
@@ -139,12 +139,12 @@ div#popular-articles div {
 
 /* FOOTER */
 
-div#about {
+footer {
     /* background-color: var(--general1); */
     background: var(--general1-darker);
 }
 
-div#about div {
+footer div {
     float: left;
     width: 40%;
     padding: 1% 5%;
