@@ -1,38 +1,132 @@
+:root {
+    --general: #9BB0C1;
+    --general1: #51829B;
+    --accent: #F6995C;
+    --accent1: #EADFB4;
+    --accent1-darker: #DACFA4;
+}
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: #5bc0eb;
+    background-color: var(--general);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h1, h2, h3, h4, h5, h6) {
     font-family: monospace;
+}
+
+.clear-float {
+    float: none;
+}
+
+/* HEADER */
+
+div#main-header {
+    padding: 1%;
+    font: large;
+    text-align: center;
+    font-family: monospace;
+    background-color: var(--accent);
     color: white;
-    background-color: #9bc53d;
 }
 
-.article-card {
-    background-color: #fde74c;
-    padding: 3%;
+/* NAVIGATION */
+
+div#navigation-bar {
+    background-color: var(--accent1);
 }
 
-ul#categories li ul li {
-    color: darkgray;
+div#navigation-bar ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div#navigation-bar li {
+    float: left;
+}
+
+div#navigation-bar a {
+    color: black;
+    display: block;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+div#navigation-bar a:hover {
+    background-color: var(--accent1-darker);
+}
+
+/* MAIN-SECTIONS */
+
+div#main-sections {
+    background-color: var(--general);
+}
+
+div#main-sections div {
+    padding: 16px 5%;
+}
+
+/* CATEGORIES */
+
+div#categories-section {
+    background-color: var(--general1);
+}
+
+div#categories-section ol#categories-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div#categories-section li.category {
+    float: left;
+}
+
+div#categories-section li.category div {
+    display: block;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+div#categories-section div ul {
+    padding: 1;
+    color: white;
     font-style: italic;
 }
 
-#main-title {
-    font-family: monospace;
-    color: white;
-    background-color: #9bc53d;
-    text-align: center;
-    padding: 1%;
+/* POPULAR */
+
+div#popular-section {}
+
+div#popular-section div {
+    width: 40%;
+    float: left;
+    margin: 1%;
+    padding: 3%;
+    background-color: var(--accent1);
 }
 
-ul#categories {
-    font-family: sans-serif;
+/* FOOTER */
+
+div#footer-section {
+    background-color: var(--general1);
+}
+
+div#footer-section div {
+    float: left;
+    width: 30%;
+    padding: 15px;
+    margin: 5%;
 }
