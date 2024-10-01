@@ -1,6 +1,7 @@
 :root {
     --general: #9BB0C1;
     --general1: #51829B;
+    --general1-darker: #41728B;
     --accent: #F6995C;
     --accent1: #EADFB4;
     --accent1-darker: #DACFA4;
@@ -20,6 +21,13 @@ body {
 
 :is(h1, h2, h3, h4, h5, h6) {
     font-family: monospace;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.2rem;
+}
+
+p {
+    padding: 1%;
+    margin: 1%;
 }
 
 .clear-float {
@@ -29,18 +37,26 @@ body {
 /* HEADER */
 
 div#main-header {
-    padding: 1%;
     font: large;
     text-align: center;
     font-family: monospace;
     background-color: var(--accent);
     color: white;
+    overflow: auto;
+    /* I still do not know, how does it work. */
 }
 
-/* NAVIGATION */
+div#title {
+    width: min-content;
+    float: left;
+    padding: 1%;
+    color: white;
+}
 
 div#navigation-bar {
-    background-color: var(--accent1);
+    float: left;
+    font-size: x-large;
+    height: 100%;
 }
 
 div#navigation-bar ol {
@@ -63,70 +79,74 @@ div#navigation-bar a {
 }
 
 div#navigation-bar a:hover {
-    background-color: var(--accent1-darker);
+    background-color: var(--accent1);
+    text-decoration-line: underline;
 }
 
-/* MAIN-SECTIONS */
+/* content */
 
-div#main-sections {
+div#content {
     background-color: var(--general);
 }
 
-div#main-sections div {
+div#content div.section {
     padding: 16px 5%;
+    overflow: auto;
 }
 
 /* CATEGORIES */
 
-div#categories-section {
+div#categories {
     background-color: var(--general1);
 }
 
-div#categories-section ol#categories-list {
-    list-style-type: none;
+div#categories ul#categories-list {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: sans-serif;
 }
 
-div#categories-section li.category {
+div#categories li.category {
     float: left;
 }
 
-div#categories-section li.category div {
+div#categories li.category div {
     display: block;
     padding: 16px;
     text-align: center;
     text-decoration: none;
 }
 
-div#categories-section div ul {
+div#categories div ul {
     padding: 1;
-    color: white;
     font-style: italic;
+    list-style-type: square;
+    color: white;
 }
 
 /* POPULAR */
 
-div#popular-section {}
-
-div#popular-section div {
-    width: 40%;
+div#popular-articles div {
+    width: 45%;
     float: left;
-    margin: 1%;
-    padding: 3%;
+    margin: 2%;
+    padding: 2%;
     background-color: var(--accent1);
 }
 
 /* FOOTER */
 
-div#footer-section {
-    background-color: var(--general1);
+div#about {
+    /* background-color: var(--general1); */
+    background: var(--general1-darker);
 }
 
-div#footer-section div {
+div#about div {
     float: left;
-    width: 30%;
-    padding: 15px;
-    margin: 5%;
+    width: 40%;
+    padding: 1% 5%;
+    margin: 1% 5%;
 }
