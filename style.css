@@ -1,0 +1,38 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #5bc0eb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: monospace;
+    color: white;
+    background-color: #9bc53d;
+}
+
+.article-card {
+    background-color: #fde74c;
+    padding: 3%;
+}
+
+ul#categories li ul li {
+    color: darkgray;
+    font-style: italic;
+}
+
+#main-title {
+    font-family: monospace;
+    color: white;
+    background-color: #9bc53d;
+    text-align: center;
+    padding: 1%;
+}
+
+ul#categories {
+    font-family: sans-serif;
+}
