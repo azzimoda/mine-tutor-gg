@@ -1,5 +1,6 @@
 :root {
     --general: #9BB0C1;
+    --general-dark: #7B90A1;
     --general1: #51829B;
     --general1-dark: #31627B;
     --accent: #F6995C;
@@ -16,7 +17,7 @@
 }
 
 body {
-    background-color: var(--general);
+    background-color: var(--general-dark);
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -42,21 +43,32 @@ header {
     font-family: monospace;
     background-color: var(--accent);
     color: white;
-    overflow: auto;
+    padding: 1%;
     /* I still do not know, how does it work. */
 }
 
-div#title {
+header>div {
+    display: grid;
+    place-content: left;
     width: min-content;
-    float: left;
+}
+
+div#title {
+    grid-column: 1;
+    width: min-content;
     padding: 1%;
     color: white;
 }
 
+div#title>div {
+    width: max-content;
+}
+
 navigation {
-    float: left;
+    grid-column: 2;
     font-size: x-large;
-    height: 100%;
+    width: max-content;
+    margin: 0 16px;
 }
 
 navigation>ol {
@@ -74,6 +86,7 @@ navigation a {
     color: black;
     display: block;
     padding: 16px;
+    border-radius: 10% / 50%;
     text-align: center;
     text-decoration: none;
 }
@@ -86,7 +99,6 @@ navigation a:hover {
 /* MAIN */
 
 main {
-    background-color: var(--general);
 }
 
 section {
@@ -96,13 +108,22 @@ section {
     border-radius: 16px;
 }
 
-/* CATEGORIES */
 
-section#categories {
-    background-color: var(--general1-dark);
+main menu {
+    margin: 16px 8%;
+    padding: 16px 5%;
+    overflow: auto;
+    border-radius: 16px;
 }
 
-section#categories ul#categories-list {
+/* CATEGORIES */
+
+menu {
+    background-color: var(--general1-dark);
+    color: var(--general)
+}
+
+menu ul#categories-list {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -111,27 +132,30 @@ section#categories ul#categories-list {
     font-family: sans-serif;
 }
 
-section#categories li.category {
+menu li.category {
     float: left;
 }
 
-section#categories li.category div {
+menu li.category div {
     display: block;
     padding: 16px;
     text-align: center;
     text-decoration: none;
 }
 
-section#categories div ul {
+menu div ul {
     padding: 1;
     font-style: italic;
     list-style-type: square;
-    color: white;
 }
 
 /* POPULAR */
 
-section#popular-articles div {
+section#popular-articles {
+    background-color: var(--general);
+}
+
+section#popular-articles article {
     width: 45%;
     float: left;
     margin: 2%;
@@ -149,9 +173,9 @@ footer {
 }
 
 footer div {
-    background-color: var(--general1);
     float: left;
     width: 40%;
     padding: 1% 5%;
     margin: 1% 5%;
+    color: var(--general)
 }
