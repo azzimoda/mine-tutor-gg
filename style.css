@@ -1,7 +1,7 @@
 :root {
     --general: #9BB0C1;
     --general1: #51829B;
-    --general1-darker: #41728B;
+    --general1-dark: #31627B;
     --accent: #F6995C;
     --accent1: #EADFB4;
     --accent1-darker: #DACFA4;
@@ -53,24 +53,24 @@ div#title {
     color: white;
 }
 
-div#navigation-bar {
+navigation {
     float: left;
     font-size: x-large;
     height: 100%;
 }
 
-div#navigation-bar ol {
+navigation>ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-div#navigation-bar li {
+navigation li {
     float: left;
 }
 
-div#navigation-bar a {
+navigation a {
     color: black;
     display: block;
     padding: 16px;
@@ -78,7 +78,7 @@ div#navigation-bar a {
     text-decoration: none;
 }
 
-div#navigation-bar a:hover {
+navigation a:hover {
     background-color: var(--accent1);
     text-decoration-line: underline;
 }
@@ -90,14 +90,16 @@ main {
 }
 
 section {
+    margin: 16px 8%;
     padding: 16px 5%;
     overflow: auto;
+    border-radius: 16px;
 }
 
 /* CATEGORIES */
 
 section#categories {
-    background-color: var(--general1);
+    background-color: var(--general1-dark);
 }
 
 section#categories ul#categories-list {
@@ -135,16 +137,19 @@ section#popular-articles div {
     margin: 2%;
     padding: 2%;
     background-color: var(--accent1);
+    border-radius: 16px;
 }
 
 /* FOOTER */
 
 footer {
     /* background-color: var(--general1); */
-    background: var(--general1-darker);
+    background-color: var(--general1-dark);
+    overflow: auto;
 }
 
 footer div {
+    background-color: var(--general1);
     float: left;
     width: 40%;
     padding: 1% 5%;
