@@ -18,6 +18,8 @@
 
 body {
     background-color: var(--general-dark);
+    background-image: url("res/img/bg.png");
+    background-size: cover;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -29,6 +31,15 @@ body {
 p {
     padding: 1%;
     margin: 1%;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+}
+
+a:hover {
+    font-style: italic;
 }
 
 .clear-float {
@@ -43,8 +54,7 @@ header {
     font-family: monospace;
     background-color: var(--accent);
     color: white;
-    padding: 1%;
-    /* I still do not know, how does it work. */
+    padding: 0 1%;
 }
 
 header>div {
@@ -53,53 +63,46 @@ header>div {
     width: min-content;
 }
 
-div#title {
-    grid-column: 1;
-    width: min-content;
-    padding: 1%;
-    color: white;
+header img {
+    max-width: 150px;
+    height: auto;
 }
 
-div#title>div {
-    width: max-content;
-}
-
-navigation {
+nav {
     grid-column: 2;
     font-size: x-large;
     width: max-content;
     margin: 0 16px;
 }
 
-navigation>ol {
+nav>ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-navigation li {
+nav li {
     float: left;
 }
 
-navigation a {
+nav a {
     color: black;
     display: block;
     padding: 16px;
     border-radius: 10% / 50%;
     text-align: center;
     text-decoration: none;
+    font-weight: normal;
 }
 
-navigation a:hover {
+nav a:hover {
+    font-style: normal;
     background-color: var(--accent1);
     text-decoration-line: underline;
 }
 
 /* MAIN */
-
-main {
-}
 
 section {
     margin: 16px 8%;
@@ -108,22 +111,19 @@ section {
     border-radius: 16px;
 }
 
-
-main menu {
-    margin: 16px 8%;
-    padding: 16px 5%;
-    overflow: auto;
-    border-radius: 16px;
-}
-
 /* CATEGORIES */
 
-menu {
+section#categories {
+    margin: 16px 8%;
+    padding: 16px 5%;
+    border-radius: 16px;
+    overflow: auto;
     background-color: var(--general1-dark);
-    color: var(--general)
+    color: var(--general);
 }
 
-menu ul#categories-list {
+section#categories>ul {
+    display: flex;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -132,18 +132,14 @@ menu ul#categories-list {
     font-family: sans-serif;
 }
 
-menu li.category {
-    float: left;
-}
-
-menu li.category div {
+section#categories>ul>li {
     display: block;
     padding: 16px;
     text-align: center;
     text-decoration: none;
 }
 
-menu div ul {
+section#categories li>ul {
     padding: 1;
     font-style: italic;
     list-style-type: square;
@@ -155,27 +151,70 @@ section#popular-articles {
     background-color: var(--general);
 }
 
-section#popular-articles article {
+section#popular-articles h1 {
+    font-size: xx-large;
+}
+
+article {
     width: 45%;
     float: left;
     margin: 2%;
-    padding: 2%;
+    padding: 0;
     background-color: var(--accent1);
     border-radius: 16px;
+}
+
+article>div.article-tumbnail {
+    border-radius: 16px 16px 0px 0px;
+    margin: 0px;
+    padding: 10% 0;
+    width: 100%;
+    height: 256px;
+    background-color: black;
+    background-size: cover;
+}
+
+article>div#article-0 {
+    background-image: url(res/img/article-0.jpg);
+}
+
+article>div#article-1 {
+    background-image: url(res/img/article-1.webp);
+}
+
+article>div#article-2 {
+    background-image: url(res/img/article-2.jpg);
+}
+
+article>div.article-body {
+    padding: 2%;
 }
 
 /* FOOTER */
 
 footer {
     /* background-color: var(--general1); */
-    background-color: var(--general1-dark);
     overflow: auto;
+    background-image: url(res/img/bedrock.jpg);
+    background-size: 90px;
 }
 
-footer div {
+footer>div {
     float: left;
     width: 40%;
+    border-radius: 16px;
     padding: 1% 5%;
     margin: 1% 5%;
-    color: var(--general)
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--general);
+}
+
+footer p {
+    font: bolder;
+}
+
+img.contact-icon {
+    opacity: 1;
+    width: 20px;
+    filter: invert();
 }
