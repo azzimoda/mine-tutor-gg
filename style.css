@@ -72,7 +72,11 @@ nav {
     grid-column: 2;
     font-size: x-large;
     width: max-content;
+    height: 100%;
     margin: 0 16px;
+
+    align-content: center;
+    justify-content: center;
 }
 
 nav>ol {
@@ -90,7 +94,7 @@ nav a {
     color: black;
     display: block;
     padding: 16px;
-    border-radius: 10% / 50%;
+    border-radius: 16px;
     text-align: center;
     text-decoration: none;
     font-weight: normal;
@@ -147,10 +151,6 @@ section#categories li>ul {
 
 /* POPULAR */
 
-section#popular-articles {
-    background-color: var(--general);
-}
-
 section#popular-articles h1 {
     font-size: xx-large;
 }
@@ -170,6 +170,7 @@ article>div.article-tumbnail {
     padding: 10% 0;
     width: 100%;
     height: 256px;
+    background: center;
     background-color: black;
     background-size: cover;
 }
@@ -214,7 +215,6 @@ footer p {
 }
 
 img.contact-icon {
-    opacity: 1;
     width: 20px;
     filter: invert();
 }
