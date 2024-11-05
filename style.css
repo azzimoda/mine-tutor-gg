@@ -19,7 +19,7 @@
 body {
     background-color: var(--general-dark);
     background-image: url("res/img/bg.png");
-    background-size: cover;
+    background-size: contain;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -113,13 +113,12 @@ section {
     padding: 16px 5%;
     overflow: auto;
     border-radius: 16px;
+    background-color: var(--general);
 }
 
 /* CATEGORIES */
 
 section#categories {
-    margin: 16px 8%;
-    padding: 16px 5%;
     border-radius: 16px;
     overflow: auto;
     background-color: var(--general1-dark);
@@ -149,22 +148,22 @@ section#categories li>ul {
     list-style-type: square;
 }
 
-/* POPULAR */
+/* Popular */
 
 section#popular-articles h1 {
     font-size: xx-large;
 }
 
 article {
-    width: 45%;
+    width: 30%;
     float: left;
-    margin: 2%;
+    margin: 1%;
     padding: 0;
     background-color: var(--accent1);
     border-radius: 16px;
 }
 
-article>div.article-tumbnail {
+div.article-card-thumbnail {
     border-radius: 16px 16px 0px 0px;
     margin: 0px;
     padding: 10% 0;
@@ -173,36 +172,39 @@ article>div.article-tumbnail {
     background: center;
     background-color: black;
     background-size: cover;
-}
-
-article>div#article-0 {
-    background-image: url(res/img/article-0.jpg);
-}
-
-article>div#article-1 {
-    background-image: url(res/img/article-1.webp);
-}
-
-article>div#article-2 {
-    background-image: url(res/img/article-2.jpg);
+    text-decoration: none;
 }
 
 article>div.article-body {
     padding: 2%;
 }
 
-/* FOOTER */
+/* Thumbnails */
+
+article div#article-0 {
+    background-image: url(res/img/article-0.jpg);
+}
+
+article div#article-1 {
+    background-image: url(res/img/article-1.webp);
+}
+
+article div#article-2 {
+    background-image: url(res/img/article-2.jpg);
+}
+
+/* Footer */
 
 footer {
-    /* background-color: var(--general1); */
+    background-color: var(--general1);
     overflow: auto;
     background-image: url(res/img/bedrock.jpg);
-    background-size: 90px;
+    background-size: 42px;
 }
 
 footer>div {
     float: left;
-    width: 40%;
+    width: max-content;
     border-radius: 16px;
     padding: 1% 5%;
     margin: 1% 5%;
