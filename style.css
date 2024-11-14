@@ -155,17 +155,43 @@ section#categories li>ul {
 
 /* Popular */
 
-section#popular-articles article {
+section#popular-articles {
     display: flex;
-    /* float: left; */
-    /* width: 30%; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+section#popular-articles>article {
+    width: fix-content;
     min-width: 256px;
-    width: min-content;
     max-width: 98%;
-    margin: 1%;
     padding: 0;
-    background-color: var(--accent1);
+    margin: 5px auto;
+    background-color: var(--general1);
     border-radius: 16px;
+}
+
+section#popular-articles>article:hover {
+    color: var(--general);
+    background-color: var(--general1-dark);
+
+    pointer-events: none;
+
+    animation-name: popular-article-hover;
+    animation-duration: 0.3s;
+}
+
+@keyframes popular-article-hover {
+    from {
+        /* background-color: initial; */
+        color: black;
+    }
+
+    to {
+        /* background-color: var(--accent1); */
+        color: var(--general);
+    }
 }
 
 div.article-card-thumbnail {
@@ -178,10 +204,12 @@ div.article-card-thumbnail {
     background-color: black;
     background-size: cover;
     text-decoration: none;
+    pointer-events: auto;
 }
 
-article>div.article-body {
+div.article-body {
     padding: 2%;
+    pointer-events: none;
 }
 
 /* Article page */
